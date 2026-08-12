@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/EduSphere/static/css/main.d6ef7c62.css",
-    "main.js": "/EduSphere/static/js/main.2b665bc6.js",
-    "static/media/photo.jpg": "/EduSphere/static/media/photo.a168210c45dd469c92c9.jpg",
+    "main.css": "/EduSphere/static/css/main.d7be348e.css",
+    "main.js": "/EduSphere/static/js/main.8c952cd5.js",
     "index.html": "/EduSphere/index.html",
-    "main.d6ef7c62.css.map": "/EduSphere/static/css/main.d6ef7c62.css.map",
-    "main.2b665bc6.js.map": "/EduSphere/static/js/main.2b665bc6.js.map"
+    "main.d7be348e.css.map": "/EduSphere/static/css/main.d7be348e.css.map",
+    "main.8c952cd5.js.map": "/EduSphere/static/js/main.8c952cd5.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6ef7c62.css",
-    "static/js/main.2b665bc6.js"
+    "static/css/main.d7be348e.css",
+    "static/js/main.8c952cd5.js"
   ]
 }
