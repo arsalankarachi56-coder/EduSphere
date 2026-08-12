@@ -1,0 +1,364 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   NAV CONTAINER
+========================= */
+
+.nav-container {
+  width: 90%;
+  max-width: 1250px;
+  height: 78px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================
+   EDUSPHERE LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.logo img {
+  width: 175px;
+  height: auto;
+
+  display: block;
+  object-fit: contain;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  position: relative;
+
+  text-decoration: none;
+
+  color: #4b5563;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #5b5cf0;
+}
+
+
+/* Active underline */
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  width: 0;
+  height: 2px;
+
+  left: 50%;
+  bottom: -8px;
+
+  background: #5b5cf0;
+
+  transform: translateX(-50%);
+
+  transition: 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #5b5cf0;
+}
+
+
+/* =========================
+   EXPLORE BUTTON
+========================= */
+
+.nav-enroll {
+  text-decoration: none;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #5b5cf0,
+    #7c3aed
+  );
+
+  padding: 12px 20px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  box-shadow:
+    0 8px 20px rgba(91, 92, 240, 0.25);
+
+  transition: 0.3s ease;
+}
+
+.nav-enroll:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(91, 92, 240, 0.35);
+}
+
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-btn {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0;
+}
+
+.menu-btn span {
+  width: 24px;
+  height: 2px;
+
+  background: #111827;
+
+  border-radius: 5px;
+
+  transition: 0.3s ease;
+}
+
+
+/* Hamburger animation */
+
+.menu-btn.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================
+   PAGE INDICATOR
+========================= */
+
+.page-indicator {
+  height: 2px;
+  width: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #5b5cf0,
+    #7c3aed,
+    #ec4899
+  );
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .nav-enroll {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  .logo img {
+    width: 160px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .nav-container {
+    height: 70px;
+  }
+
+  .logo img {
+    width: 145px;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+
+  /* Mobile Navigation */
+
+  .nav-links {
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 25px 20px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 22px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(-15px);
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s ease;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+    box-shadow:
+      0 15px 30px rgba(17, 24, 39, 0.08);
+  }
+
+
+  /* Open Menu */
+
+  .nav-links.open {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .nav-enroll {
+    width: 80%;
+
+    text-align: center;
+
+    padding: 12px 20px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .nav-container {
+    width: 88%;
+  }
+
+  .logo img {
+    width: 135px;
+  }
+
+  .nav-links {
+    padding: 22px 15px;
+  }
+
+  .nav-enroll {
+    width: 90%;
+  }
+}

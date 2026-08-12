@@ -1,0 +1,233 @@
+/* =========================
+   404 PAGE
+========================= */
+
+.not-found-page {
+  min-height: 75vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 20px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 15% 35%,
+      rgba(91, 92, 240, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 65%,
+      rgba(124, 58, 237, 0.1),
+      transparent 30%
+    ),
+    #f8f8ff;
+
+  overflow: hidden;
+}
+
+.not-found-content {
+  max-width: 650px;
+
+  animation: notFoundShow 0.8s ease forwards;
+}
+
+
+/* =========================
+   404 NUMBER
+========================= */
+
+.not-found-number {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #5b5cf0;
+
+  font-size: clamp(100px, 18vw, 180px);
+
+  font-weight: 800;
+
+  line-height: 0.9;
+
+  letter-spacing: -10px;
+
+  animation: numberFloat 4s ease-in-out infinite;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.not-found-content h1 {
+  margin: 25px 0 15px;
+
+  color: #111827;
+
+  font-size: clamp(32px, 5vw, 48px);
+
+  letter-spacing: -1.5px;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.not-found-content p {
+  max-width: 520px;
+
+  margin: 0 auto 30px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.not-found-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+.not-found-buttons button {
+  padding: 13px 22px;
+
+  border-radius: 28px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+/* HOME */
+
+.not-found-home {
+  border: none;
+
+  background: linear-gradient(
+    135deg,
+    #5b5cf0,
+    #7c3aed
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 25px rgba(91, 92, 240, 0.25);
+}
+
+.not-found-home:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 16px 30px rgba(91, 92, 240, 0.35);
+}
+
+
+/* COURSES */
+
+.not-found-courses {
+  border: 1px solid #dddde7;
+
+  background: #ffffff;
+
+  color: #5b5cf0;
+}
+
+.not-found-courses:hover {
+  transform: translateY(-4px);
+
+  border-color: #5b5cf0;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes notFoundShow {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes numberFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .not-found-page {
+    min-height: 70vh;
+
+    padding: 80px 20px;
+  }
+
+  .not-found-number {
+    font-size: 110px;
+
+    letter-spacing: -6px;
+  }
+
+  .not-found-content h1 {
+    font-size: 34px;
+  }
+
+  .not-found-content p {
+    font-size: 13px;
+  }
+
+  .not-found-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    max-width: 280px;
+
+    margin: auto;
+  }
+}

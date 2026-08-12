@@ -1,0 +1,214 @@
+/* =========================
+   INSTRUCTOR CARD
+========================= */
+
+.instructor-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #ececf2;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 35px rgba(17, 24, 39, 0.06);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+
+  animation: instructorCardShow 0.7s ease both;
+}
+
+.instructor-card:hover {
+  transform: translateY(-9px);
+
+  border-color: #ddd9ff;
+
+  box-shadow:
+    0 22px 45px rgba(91, 92, 240, 0.13);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.instructor-image-wrapper {
+  position: relative;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  background: #f1f1f5;
+}
+
+.instructor-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.instructor-card:hover .instructor-image {
+  transform: scale(1.06);
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.instructor-experience {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  padding: 7px 13px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #5b5cf0;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.instructor-card-content {
+  padding: 24px;
+}
+
+.instructor-designation {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: #5b5cf0;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.instructor-card-content h3 {
+  margin: 0 0 8px;
+
+  color: #111827;
+
+  font-size: 21px;
+
+  line-height: 1.3;
+}
+
+.instructor-card-content p {
+  min-height: 38px;
+
+  margin: 0 0 20px;
+
+  color: #73798a;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.instructor-details-btn {
+  width: 100%;
+
+  padding: 11px 16px;
+
+  border: none;
+
+  border-radius: 22px;
+
+  background: #f0efff;
+
+  color: #5b5cf0;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.instructor-details-btn:hover {
+  background: linear-gradient(
+    135deg,
+    #5b5cf0,
+    #7c3aed
+  );
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes instructorCardShow {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .instructor-image-wrapper {
+    height: 280px;
+  }
+
+  .instructor-card-content {
+    padding: 22px;
+  }
+}

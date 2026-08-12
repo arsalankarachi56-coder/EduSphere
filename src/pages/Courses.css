@@ -1,0 +1,324 @@
+/* =========================
+   COURSES PAGE
+========================= */
+
+.courses-page {
+  min-height: 100vh;
+  background: #f8f9ff;
+  overflow: hidden;
+}
+
+
+/* =========================
+   COURSES HERO
+========================= */
+
+.courses-hero {
+  position: relative;
+  padding: 120px 6% 100px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(91, 92, 240, 0.14),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(124, 58, 237, 0.12),
+      transparent 30%
+    ),
+    #ffffff;
+
+  overflow: hidden;
+}
+
+.courses-hero::before {
+  content: "";
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  border-radius: 50%;
+
+  background: rgba(91, 92, 240, 0.08);
+
+  top: -100px;
+  left: -80px;
+
+  filter: blur(10px);
+
+  animation: coursesFloat 6s ease-in-out infinite;
+}
+
+.courses-hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 800px;
+  margin: auto;
+
+  animation: coursesHeroShow 0.8s ease forwards;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.courses-label {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: #5b5cf0;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================
+   HERO TITLE
+========================= */
+
+.courses-hero h1 {
+  margin: 0 0 22px;
+
+  color: #111827;
+
+  font-size: clamp(42px, 6vw, 68px);
+
+  line-height: 1.05;
+
+  letter-spacing: -3px;
+}
+
+.courses-hero h1 span {
+  display: block;
+
+  color: #5b5cf0;
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.courses-hero p {
+  max-width: 680px;
+
+  margin: auto;
+
+  color: #6b7280;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   ALL COURSES SECTION
+========================= */
+
+.all-courses {
+  width: 90%;
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 90px 0 110px;
+}
+
+
+/* =========================
+   COURSES HEADING
+========================= */
+
+.courses-heading {
+  max-width: 720px;
+
+  margin-bottom: 55px;
+
+  animation: coursesHeadingShow 0.8s ease forwards;
+}
+
+.courses-heading h2 {
+  margin: 8px 0 15px;
+
+  color: #111827;
+
+  font-size: clamp(32px, 4vw, 48px);
+
+  line-height: 1.15;
+
+  letter-spacing: -1.5px;
+}
+
+.courses-heading h2 span {
+  color: #5b5cf0;
+}
+
+.courses-heading p {
+  max-width: 650px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   COURSES GRID
+========================= */
+
+.all-courses-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+
+  align-items: stretch;
+}
+
+
+/* =========================
+   COURSE CARD FIX
+========================= */
+
+.all-courses-grid > * {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes coursesHeroShow {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes coursesHeadingShow {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes coursesFloat {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(30px, 25px);
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .courses-hero {
+    padding: 100px 5% 80px;
+  }
+
+  .all-courses {
+    padding: 75px 0 90px;
+  }
+
+  .all-courses-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .courses-hero {
+    padding: 85px 20px 70px;
+  }
+
+  .courses-hero h1 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
+  }
+
+  .courses-hero p {
+    font-size: 14px;
+  }
+
+  .all-courses {
+    width: 90%;
+
+    padding: 65px 0 80px;
+  }
+
+  .courses-heading {
+    margin-bottom: 35px;
+  }
+
+  .courses-heading h2 {
+    font-size: 34px;
+  }
+
+  .all-courses-grid {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .courses-hero {
+    padding-top: 70px;
+  }
+
+  .courses-hero h1 {
+    font-size: 36px;
+  }
+
+  .courses-heading h2 {
+    font-size: 30px;
+  }
+}
