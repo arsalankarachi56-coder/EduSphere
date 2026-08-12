@@ -1,5 +1,3 @@
-import sirPhoto from "../assets/photo.jpg";
-
 /* =========================
    COURSES
 ========================= */
@@ -12,7 +10,7 @@ export const courses = [
       "Learn to build modern, responsive and professional websites using HTML, CSS and JavaScript.",
     duration: "6 Months",
     level: "Beginner",
-    instructor: "Asif Ahmed",
+    instructor: "Ahmed Raza",
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
     features: [
@@ -31,7 +29,7 @@ export const courses = [
       "Master React JS and learn how to create fast, interactive and scalable web applications.",
     duration: "4 Months",
     level: "Intermediate",
-    instructor: "Asif Ahmed",
+    instructor: "Hamza Khan",
     image:
       "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=900&q=80",
     features: [
@@ -50,7 +48,7 @@ export const courses = [
       "Build a strong foundation in modern JavaScript and develop interactive web applications.",
     duration: "3 Months",
     level: "Beginner",
-    instructor: "Asif Ahmed",
+    instructor: "Bilal Ahmed",
     image:
       "https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&w=900&q=80",
     features: [
@@ -69,7 +67,7 @@ export const courses = [
       "Learn how to design beautiful, user-friendly and modern digital experiences.",
     duration: "3 Months",
     level: "Beginner",
-    instructor: "Asif Ahmed",
+    instructor: "Owais Ahmed",
     image:
       "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80",
     features: [
@@ -88,7 +86,7 @@ export const courses = [
       "Learn Python programming from fundamentals to practical application development.",
     duration: "5 Months",
     level: "Beginner",
-    instructor: "Asif Ahmed",
+    instructor: "Ahmed Raza",
     image:
       "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=900&q=80",
     features: [
@@ -107,7 +105,7 @@ export const courses = [
       "Learn modern digital marketing strategies to grow brands and businesses online.",
     duration: "3 Months",
     level: "Intermediate",
-    instructor: "Asif Ahmed",
+    instructor: "Hamza Khan",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
     features: [
@@ -128,45 +126,49 @@ export const courses = [
 export const instructors = [
   {
     id: 1,
-    name: "Asif Ahmed",
+    name: "Ahmed Raza",
     designation: "Senior Web Development Instructor",
     expertise: "HTML, CSS, JavaScript & Full Stack Development",
     experience: "8+ Years",
-    image: sirPhoto,
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
     bio:
-      "Asif Ahmed is an experienced web development instructor who helps students turn their ideas into real-world web applications through practical learning.",
+      "Ahmed Raza is an experienced web development instructor who helps students build practical skills through real-world projects.",
   },
 
   {
     id: 2,
-    name: "Asif Ahmed",
+    name: "Hamza Khan",
     designation: "React JS Instructor",
     expertise: "React, JavaScript & Frontend Development",
-    experience: "8+ Years",
-    image: sirPhoto,
+    experience: "6+ Years",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80",
     bio:
-      "Asif Ahmed specializes in modern frontend development and focuses on teaching students practical React development skills through real-world projects.",
+      "Hamza Khan specializes in modern frontend development and focuses on practical React development and project-based learning.",
   },
 
   {
     id: 3,
-    name: "Asif Ahmed",
+    name: "Bilal Ahmed",
     designation: "JavaScript Instructor",
     expertise: "JavaScript, APIs & Web Applications",
-    experience: "8+ Years",
-    image: sirPhoto,
+    experience: "7+ Years",
+    image:
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80",
     bio:
-      "Asif Ahmed teaches JavaScript with a practical approach and helps students understand programming concepts through hands-on projects.",
+      "Bilal Ahmed teaches JavaScript with a practical approach and helps students understand programming concepts through hands-on projects.",
   },
 
   {
     id: 4,
-    name: "Asif Ahmed",
+    name: "Owais Ahmed",
     designation: "UI/UX Design Instructor",
     expertise: "UI/UX, Figma & Product Design",
-    experience: "8+ Years",
-    image: sirPhoto,
+    experience: "5+ Years",
+    image:
+      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80",
     bio:
-      "Asif Ahmed helps students understand modern UI/UX design principles and create clean, useful and engaging digital experiences.",
+      "Owais Ahmed helps students understand modern UI/UX design principles and create clean, useful and engaging digital experiences.",
   },
 ];

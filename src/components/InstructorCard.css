@@ -4,13 +4,11 @@
 
 .instructor-card {
   width: 100%;
-
   overflow: hidden;
 
   background: #ffffff;
 
   border: 1px solid #ececf2;
-
   border-radius: 22px;
 
   box-shadow:
@@ -32,7 +30,6 @@
   box-shadow:
     0 22px 45px rgba(91, 92, 240, 0.13);
 }
-
 
 /* =========================
    IMAGE
@@ -56,13 +53,15 @@
 
   object-fit: cover;
 
+  /* Face ko thora neeche dikhane ke liye */
+  object-position: center 25%;
+
   transition: transform 0.5s ease;
 }
 
 .instructor-card:hover .instructor-image {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
-
 
 /* =========================
    EXPERIENCE
@@ -89,7 +88,6 @@
   box-shadow:
     0 5px 15px rgba(0, 0, 0, 0.08);
 }
-
 
 /* =========================
    CONTENT
@@ -137,7 +135,6 @@
   line-height: 1.7;
 }
 
-
 /* =========================
    BUTTON
 ========================= */
@@ -178,7 +175,6 @@
   transform: translateY(-2px);
 }
 
-
 /* =========================
    ANIMATION
 ========================= */
@@ -186,26 +182,26 @@
 @keyframes instructorCardShow {
   from {
     opacity: 0;
-
     transform: translateY(25px);
   }
 
   to {
     opacity: 1;
-
     transform: translateY(0);
   }
 }
-
 
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 600px) {
-
   .instructor-image-wrapper {
     height: 280px;
+  }
+
+  .instructor-image {
+    object-position: center 22%;
   }
 
   .instructor-card-content {
