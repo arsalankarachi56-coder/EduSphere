@@ -18,18 +18,28 @@ function App() {
     <>
       <Navbar />
 
-          <Routes>
+      <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/about" element={<About />} />
+
         <Route path="/courses" element={<Courses />} />
+
+        <Route path="/courses/:id" element={<CourseDetails />} />
+
         <Route path="/instructors" element={<Instructors />} />
+
+        <Route
+          path="/instructors/:id"
+          element={<InstructorDetails />}
+        />
+
         <Route path="/contact" element={<Contact />} />
-        <Route path="/courses/:id" element={<CourseDetails />}/>
-        <Route path="/instructors/:id"element={<InstructorDetails />}/>
-        <Route path="*" element={<NotFound />}/>
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
 }
 
-export default App; 
+export default App;
